@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+    <h1>Sudoku</h1>
+
+    <div class="difficulty">
+      <p>Choose Difficulty</p>
+      <input
+        type="radio"
+        class="difficulty-radio"
+        checked
+        name="difficulty-radio"
+        value="easy"
+      />
+      <label for="difficulty-easy">Easy</label>
+
+      <input
+        type="radio"
+        class="difficulty-radio"
+        name="difficulty-radio"
+        value="medium"
+      />
+      <label for="difficulty-medium">Medium</label>
+
+      <input
+        type="radio"
+        class="difficulty-radio"
+        name="difficulty-radio"
+        value="hard"
+      />
+      <label for="difficulty-hard">Hard</label>
+
+      <input
+        type="radio"
+        class="difficulty-radio"
+        name="difficulty-radio"
+        value="random"
+      />
+      <label for="difficulty-random">Random</label>
+    </div>
+    <p id="message"></p>
+    <div>
+      <button id="change-diffuculty" onclick="PopulateBoard()">
+        Change Difficulty
+      </button>
+    </div>
+
+    <div class="container-boxes">
+      <table class="box" id="box"></table>
+    </div>
+
+    <div class="buttons">
+      <button id="reset-boxes" onclick="clearInput()" type="submit">
+        Reset all boxes
+      </button>
+      <button onclick="ValidateButton()" class="validate">Validate</button>
+      <button onclick="Undo()" class="solve">Undo Last Change</button>
+      <button onclick="SolveButton()" class="solve">Solve</button>
+    </div>
+</div>
+
+    <div class="boxes"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
